@@ -5,9 +5,13 @@ import Contador from './componentes/Contator'
 //exercicios
 import Simples from './componentes/Simples'
 import ParImpar from './componentes/ParImpar'
+import Plataformas from './componentes/Plataformas'
 import Inverter, { MegaSena } from './componentes/Multi'
 
 export default createDrawerNavigator({
+    Plataformas:{ //tem toast no android e alert no iOS
+        screen: Plataformas
+    },
     Contador:{
         screen: () => <Contador numeroInicial={100} />,
     },
