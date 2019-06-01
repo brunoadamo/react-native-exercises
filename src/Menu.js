@@ -9,7 +9,7 @@ import Inverter, { MegaSena } from './componentes/Multi'
 
 export default createDrawerNavigator({
     Contador:{
-        screen: () => <Contador numero={2} />,
+        screen: () => <Contador numeroInicial={100} />,
     },
     MegaSena:{
         screen: () => <MegaSena numeros={8} />,
