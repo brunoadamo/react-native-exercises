@@ -6,9 +6,14 @@ import Contador from './componentes/Contator'
 import Simples from './componentes/Simples'
 import ParImpar from './componentes/ParImpar'
 import Plataformas from './componentes/Plataformas'
+import ValidarProps from './componentes/ValidarProps'
 import Inverter, { MegaSena } from './componentes/Multi'
 
 export default createDrawerNavigator({
+    ValidarProps:{ //tem toast no android e alert no iOS
+        screen: () => <ValidarProps ano={18} />,
+        navigationOption: { title: 'validar Propriedades'}
+    },
     Plataformas:{ //tem toast no android e alert no iOS
         screen: Plataformas
     },
