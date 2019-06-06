@@ -10,42 +10,56 @@ import ValidarProps from './componentes/ValidarProps'
 import Evento from './componentes/Evento'
 import Avo from './componentes/ComunicacaoDireta'
 import { TextoSincronizado } from './componentes/ComunicacaoIndireta'
+import ListaFlex from "./componentes/ListaFlex";
+import Flex from "./componentes/Flex";
 import Inverter, { MegaSena } from './componentes/Multi'
 
 export default createDrawerNavigator({
-    TextoSincronizado:{ 
-        screen: TextoSincronizado,
-        navigationOptions: { title: 'Texto Sincronizado' }
+    Flex: {
+      screen: Flex
     },
-    Avo:{ 
-        screen: () => <Avo nome="João" sobrenome="Silva"></Avo>,
+    ListaFlex: {
+      screen: ListaFlex,
+      navigationOptions: { title: "Lista Flex" }
     },
-    Evento:{ //tem toast no android e alert no iOS
-        screen: Evento,
+    TextoSincronizado: {
+      screen: TextoSincronizado,
+      navigationOptions: { title: "Texto Sincronizado" }
     },
-    ValidarProps:{ //tem toast no android e alert no iOS
-        screen: () => <ValidarProps ano={18} />,
-        navigationOptions: { title: 'Validar Propriedades'}
+    Avo: {
+      screen: () => <Avo nome="João" sobrenome="Silva" />
     },
-    Plataformas:{ //tem toast no android e alert no iOS
-        screen: Plataformas
+    Evento: {
+      //tem toast no android e alert no iOS
+      screen: Evento
     },
-    Contador:{
-        screen: () => <Contador numeroInicial={100} />,
+    ValidarProps: {
+      //tem toast no android e alert no iOS
+      screen: () => <ValidarProps ano={18} />,
+      navigationOptions: { title: "Validar Propriedades" }
     },
-    MegaSena:{
-        screen: () => <MegaSena numeros={8} />,
-        navigationOptions: { title: 'Mega Sena'}
+    Plataformas: {
+      //tem toast no android e alert no iOS
+      screen: Plataformas
     },
-    Inverter:{
-        screen: () => <Inverter texto='React Nativo' />,
+    Contador: {
+      screen: () => <Contador numeroInicial={100} />
     },
-    ParImpar:{
-        screen: () => <ParImpar numero={2} />,
-        navigationOptions: { title: 'Par e Ímpar'}
+    MegaSena: {
+      screen: () => <MegaSena numeros={8} />,
+      navigationOptions: { title: "Mega Sena" }
     },
-    Simples:{
-        screen: () => <Simples texto='Flexivel' />,
-        // screen: () => Simples, 
+    Inverter: {
+      screen: () => <Inverter texto="React Nativo" />
+    },
+    ParImpar: {
+      screen: () => <ParImpar numero={2} />,
+      navigationOptions: { title: "Par e Ímpar" }
+    },
+    Simples: {
+      screen: () => <Simples texto="Flexivel" />
+      // screen: () => Simples,
     }
-}, { drawerWidth: 300 })
+  },
+  { drawerWidth: 300 }
+);
